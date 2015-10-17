@@ -13,6 +13,7 @@ botapi_url = 'https://api.telegram.org/bot'
 token = sys.argv[1]
 endpoint = botapi_url + token
 offset = 0
+print(time.ctime(), ': bot started')
 while(True):
     try:
         method = 'getUpdates'
@@ -58,11 +59,11 @@ while(True):
         # print json
         time.sleep(1)
     except ValueError:
-        print("Broken response: ", response)
+        print(time.ctime(), ": Broken response: ", response)
         time.sleep(60)
     except KeyboardInterrupt:
-        print("Ctrl-C pressed - exiting")
+        print(time.ctime(), ": Ctrl-C pressed - exiting")
         exit(1)
     except:
-        print("Unexpected error", sys.exc_info()[0])
+        print(time.ctime(), ": Unexpected error", sys.exc_info()[0])
         time.sleep(300)
