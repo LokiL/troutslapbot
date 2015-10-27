@@ -1,7 +1,7 @@
 # troutslapbot
 Simpe Telegram bot that allows you to slap someone around a bit with a wet trout
 
-# Prerequisites
+## Prerequisites
 This bot is written in Python and requires at minimum the 3rd version of it.
 
 ## Installation
